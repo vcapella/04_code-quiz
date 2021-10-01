@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <title>CODE QUIZ!</title>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+
+            <div class="controls">
+                <h1>Are you ready for the QUIZ challenge? </h1>
+                <button id="start-btn" class="controls-btn">Start</button>
+                <button id="leader-board" class="controls-btn">Leaderboard</button>
+                
+            </div>
+
+            <div class= "card timer hidden" id="score-counter">
+                <div class = "timer-text">
+                <div class="large-font timer-count">200</div>
+                <h3>seconds remaining</h3>
+                </div>
+            </div>
+
+            <div class="final-board hidden">
+                <h3>SCORE BOARD</h3>
+                <div id="user-score"></div>
+            </div>
+
+            <div class="return-board hidden">
+                <button id="return-main" class="return">Return</button>
+            </div>
+
+            <div id="answer-btn" class="btn-grid hidden">
+                <h3 id="question" class="question-container"></h3> 
+                <button value="1" id="opt1" class="btn"> Option 1</button>
+                <button value="2" id="opt2" class="btn"> Option 2</button>
+                <button value="3" id="opt3" class="btn"> Option 3</button>
+                <button value="4" id="opt4" class="btn"> Option 4</button>
+            </div>
+
+            <div><h4 id="correct-wrong"></h4></div>
+
+            <div id="form-score" class="form hidden">
+                <form>
+                    <input type="text" maxlength="4" required id="initials" placeholder="Your Initials"/>
+                    <button type="submit" class="btn" id="saveScore">Save and Return</button>
+                    
+                </form>
+            </div>
+            
+
+        </div>
+
+
+    </div>
+
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
