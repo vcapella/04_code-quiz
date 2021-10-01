@@ -60,18 +60,18 @@ startButton.addEventListener("click", function() {
     showQuestion();
     let timeCDown = setInterval(function(){
         
-        if (timeScore>0 && currentQuestion>=questions.length){
+        if (timeScore>0 && currentQuestion>=questions.length){    //statement to finish when all questions are answered
             console.log("Your Score is "+timeScore);
             removeHidden("#form-score");
             clearInterval(timeCDown);
         }
 
-        else if (timeScore>0){
+        else if (timeScore>0){   //statement to countdown
             timeScore--;
             console.log(timeScore);
             timer.textContent = timeScore;
 
-        } else {
+        } else {  //statement to finish when timeScore reaches 0
             clearInterval(timeCDown);
             removeHidden("#form-score");
             addHidden("#answer-btn");
@@ -99,7 +99,6 @@ function showQuestion () {
         addHidden("#answer-btn");
         addHidden(".timer-text");
         anwser.textContent = ("YOUR SCORE IS "+timeScore);
-        //anwser.textContent = "OVER!!!";
         clearInterval(timeScore);
     }
 else{
@@ -111,7 +110,7 @@ else{
     btn4.textContent = cQuestion.option4;
 }
 }
-
+//EventListeners to check answer for each option
 btn1.addEventListener("click", function(e){
     e.preventDefault();
     let optClicked = e.target;
@@ -137,15 +136,16 @@ function checkAnswer(buttonValue){
     let cQuestion = questions[currentQuestion];
 
     if(cQuestion.rAnswer==buttonValue){
-        console.log("ACERTOU MIZERAVI!!!");
-        anwser.textContent = "ACERTOU MIZERAVI!!!";
+        console.log("CORRECT!!!");
+        anwser.textContent = "CORRECT!!!";
 
         currentQuestion++;
 
         showQuestion();
     } else{
         timeScore -=50;
-        anwser.textContent = "ERRRRRRROOOU!!!";
+        anwser.textContent = "WROOOOOOONG!!!";
+        console.log("WROOOOOOONG!!!");
         currentQuestion++;
         showQuestion();
     }
@@ -188,7 +188,7 @@ returnBtn.addEventListener("click",function(){
     removeHidden(".controls");
     addHidden(".final-board");
     addHidden(".return-board");
-    location.reload();
+    location.reload();   //refresh page to remove duplicates
     
 })
 
