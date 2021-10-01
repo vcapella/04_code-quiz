@@ -28,6 +28,7 @@ THEN I can save my initials and my score
 
 The following animation demonstrates the application functionality:
 
+![Quiz_mockpup](https://user-images.githubusercontent.com/90168071/135561251-089c818f-6d0f-45de-bf69-2e061bbb9b67.gif)
 
 ## IMPROVEMENTS TO DO
 
